@@ -1,0 +1,7 @@
+.profile-detail-container{
+    display: flex;
+    width: 75%;
+    height: 15.625rem;
+    border: 2px solid #32407b;
+    margin:50px 50px 50px 25px;
+}
