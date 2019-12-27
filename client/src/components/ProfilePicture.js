@@ -14,7 +14,7 @@ export default function ProfilePicture() {
                     {profilePic.length === 0 ? '': <img alt="Profile Pic" src={profilePic}/>}
                 </div>
                 <div className="upload-button">
-                    <input type="file"  id="file" onChange={(e)=>handlePhoto(e)}/>
+                    <input type="file"  id="file" onChange={handlePhoto}/>
                     <label htmlFor="file">Upload Picture</label>
                 </div>
             </div>
