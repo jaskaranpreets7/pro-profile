@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../style/App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import ProfilePicture from './ProfilePicture';
 import ProfileDetails from './ProfileDetails';
+import firebase from 'firebase'
+import { config } from "../common/firebase.js";
 
-function App() {
-  return (
-    <div className="app-container">
-      <ProfilePicture/>
-      <ProfileDetails/>
-    </div>
-  );
+
+class App extends Component{
+  componentDidMount(){
+    firebase.initializeApp(config)
+  }
+  render(){
+    return (
+      <div className="app-container">
+        <ProfilePicture/>
+        <ProfileDetails/>
+      </div>
+    );
+  }
 }
 
 export default App;
