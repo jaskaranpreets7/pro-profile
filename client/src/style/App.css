@@ -1,8 +1,7 @@
 .app-container{
   height: 100vh;
   width: 100%;
-  background: url('../assets/wall.jpeg');
   overflow: auto;
   min-height: 100vh;
-  display : flex 
+  display : flex ;
 }
