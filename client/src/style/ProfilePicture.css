@@ -1,9 +1,11 @@
 .profile-container{
-    width: 22%;
-    height: 13.625rem;
-    border: 2px solid #32407b;
-    margin:50px 25px 50px 50px;
+    width: 160px;
+    height: 160px;
+    box-sizing: border-box;
+    border: 0 solid transparent;
     border-radius: 10%;
+    margin:25px 25px 0px 50px;
+
 }
 
 .profile-picture{
