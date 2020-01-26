@@ -8,13 +8,43 @@ import { config } from "../common/firebase.js";
 
 
 class App extends Component{
+  constructor(props){
+    super()
+    this.state = {
+      img : ''
+    }
+  }
   componentDidMount(){
     firebase.initializeApp(config)
+    this.getProfilePic()
+  }
+
+  uploadedImage = (event) => {
+    const storage = firebase.storage()
+    const image = event.target.files[0]
+    localStorage.setItem('image', image.name)
+    storage.ref(`images/${image.name}`).put(image)
+  }
+
+  getProfilePic = () => {
+    let reterivedImg = localStorage.getItem('image')
+    if(reterivedImg.length > 0 ){
+      const storage = firebase.storage()
+      storage.ref('images').child(reterivedImg).getDownloadURL()
+        .then((img)=>{
+          this.setState({
+            img : img
+          })
+        })
+        .catch((error)=>{
+          console.log(error)
+        })
+    }
   }
   render(){
     return (
       <div className="app-container">
-        <ProfilePicture/>
+        <ProfilePicture uploadedImage={this.uploadedImage} img={this.state.img}/>
         <ProfileDetails/>
       </div>
     );
