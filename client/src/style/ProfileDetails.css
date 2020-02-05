@@ -10,16 +10,16 @@
 }
 .profile-detail > .name{
     color: black;
-    font-size: 65px;
+    font-size: 7vw;
     font-family: fantasy;
 }
 .profile-detail > .email{
     color: black;
     font-family: fantasy;
-    font-size: 40px;
+    font-size: 3.5vw;
 }
 .profile-detail > .phone{
     color: black;
     font-family: fantasy;
-    font-size: 40px;
+    font-size: 3.5vw;
 }
