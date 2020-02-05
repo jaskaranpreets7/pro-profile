@@ -17,7 +17,7 @@ export default function ProfilePicture(props) {
                 </div>
                 <div className="upload-button">
                     <input type="file" id="file" onChange={handlePhoto}/>
-                    <label htmlFor="file">Upload Picture</label>
+                    <label htmlFor="file">Upload</label>
                 </div>
             </div>
         </Fragment>
