@@ -3,5 +3,9 @@
   width: 100%;
   overflow: auto;
   min-height: 100vh;
+}
+
+.app-profile-wrapper{
+  width: 100%;
   display : flex ;
 }
