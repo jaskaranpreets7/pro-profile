@@ -5,6 +5,7 @@ import ProfilePicture from './ProfilePicture';
 import ProfileDetails from './ProfileDetails';
 import firebase from 'firebase'
 import { config } from "../common/firebase.js";
+import ProfileContent from './ProfileContent';
 
 
 class App extends Component{
@@ -44,8 +45,13 @@ class App extends Component{
   render(){
     return (
       <div className="app-container">
-        <ProfilePicture uploadedImage={this.uploadedImage} img={this.state.img}/>
-        <ProfileDetails/>
+        <div className="app-profile-wrapper" >
+          <ProfilePicture uploadedImage={this.uploadedImage} img={this.state.img}/>
+          <ProfileDetails/>
+        </div>
+        <div>
+          <ProfileContent/>
+        </div>
       </div>
     );
   }
