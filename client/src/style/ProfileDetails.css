@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     width: 75%;
-    height: 15.625rem;
+    height: 7.625rem;
     margin:25px 50px 0px 20px;
 }
 .profile-detail{
@@ -10,16 +10,16 @@
 }
 .profile-detail > .name{
     color: black;
-    font-size: 7vw;
+    font-size: 6vw;
     font-family: fantasy;
 }
 .profile-detail > .email{
     color: black;
     font-family: fantasy;
-    font-size: 3.5vw;
+    font-size: 1.5vw;
 }
 .profile-detail > .phone{
     color: black;
     font-family: fantasy;
-    font-size: 3.5vw;
+    font-size: 1.5vw;
 }
