@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import '../style/App.css';
-import 'bootstrap/dist/css/bootstrap.css';
 import ProfilePicture from './ProfilePicture';
 import ProfileDetails from './ProfileDetails';
 import firebase from 'firebase'
 import { config } from "../common/firebase.js";
 import ProfileContent from './ProfileContent';
+import Button from './Button';
 
 
 class App extends Component{
@@ -42,11 +42,21 @@ class App extends Component{
         })
     }
   }
+  toLinkedin = () => {
+    window.location.href = 'https://www.linkedin.com/in/jaskaranpreet-singh/'
+  }
+  toGithub = () => {
+    window.location.href = 'https://github.com/jaskaranpreets7'
+  }
   render(){
     return (
       <div className="app-container">
         <div className="app-profile-wrapper" >
           <ProfilePicture uploadedImage={this.uploadedImage} img={this.state.img}/>
+          <div className="button-container">
+            <Button className={"fab fa-github"} handleClick={this.toGithub}/>
+            <Button className={"fab fa-linkedin"} handleClick={this.toLinkedin}/>
+          </div>
           <ProfileDetails/>
         </div>
         <div>
