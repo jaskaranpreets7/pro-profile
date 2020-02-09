@@ -46,7 +46,7 @@ class App extends Component{
     window.location.href = 'https://www.linkedin.com/in/jaskaranpreet-singh/'
   }
   toGithub = () => {
-    window.location.href = 'https://github.com/jaskaranpreets7'
+    window.location.href = 'https://github.com/jaskaranpreets7?tab=repositories'
   }
   render(){
     return (
