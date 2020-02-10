@@ -11,9 +11,25 @@
     width: 80%;
     height: 100%;
     grid-template-columns: 25% auto;
-    background-color: white;
     border-radius: 20px;
 }
 .profile-content-container > .profile-drawer {
-    border-right: 2px solid gray;
+    /* border-right: 2px solid gray; */
+}
+
+.profile-drawer{
+    margin: 30% 0% 0% 0%;
+    padding: 10px;
+}
+
+.profile-view{
+    display: block;
+    width: 100%;
+    padding: 5%;
+    background-color: white;
+    border-radius: 20px;
+    min-height: 90%;
+    max-height: 90%;
+    overflow: auto;
+
 }
