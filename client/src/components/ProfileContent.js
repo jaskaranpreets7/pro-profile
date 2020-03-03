@@ -8,7 +8,6 @@ export default function ProfileContent(props) {
 
     const [value, setValue] = useState('')
     const handleClick = (label) => {
-        console.log('in content ' , label)
         setValue(label)
     }
     return (
