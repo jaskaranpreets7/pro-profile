@@ -13,24 +13,34 @@ class App extends Component{
   constructor(props){
     super()
     this.state = {
-      img : ''
+      userProfileData:{},
+      imgKey : '',
+      img : '',
     }
-
-
   }
+
   componentDidMount(){
     firebase.initializeApp(config)
-    this.fetchData()
-    this.getProfilePic()
+    this.fetchUserProfile()
+    setTimeout(()=>{
+      this.getProfilePic()
+    },1000)
   }
 
-  fetchData = async() => {
+  fetchUserProfile = async() => {
     await axios.get('https://pro-profile-fb2e2.firebaseio.com/0.json')
-      .then((resp)=>console.log('reso',resp))
+      .then((response)=>{
+        this.setState({
+          userProfileData : response.data.user_profile,
+          imgKey : response.data.image_key
+        })
+      }).catch((error)=>{
+        console.log('Error in fetch userProfile', error)
+      })
   }
+  
   uploadedImage = (event) => {
     const storage = firebase.storage()
-
     const image = event.target.files[0]
     localStorage.setItem('image', image.name)
     storage.ref(`images/${image.name}`).put(image)
@@ -38,10 +48,8 @@ class App extends Component{
 
   getProfilePic = () => {
     const storage = firebase.storage()
-
-    // let reterivedImg = localStorage.getItem('image')
-    // if(reterivedImg && reterivedImg.length > 0 ){
-        storage.ref('images').child('IMG_3873.JPG').getDownloadURL()
+    if(this.state.imgKey.length > 0 ){
+        storage.ref('images').child(this.state.imgKey).getDownloadURL()
         .then((img)=>{
           this.setState({
             img : img
@@ -50,7 +58,7 @@ class App extends Component{
         .catch((error)=>{
           console.log(error)
         })
-    // }
+    }
   }
   toLinkedin = () => {
     window.location.href = 'https://www.linkedin.com/in/jaskaranpreet-singh/'
@@ -62,12 +70,12 @@ class App extends Component{
     return (
       <div className="app-container">
         <div className="app-profile-wrapper" >
-          <ProfilePicture uploadedImage={this.uploadedImage} img={this.state.img}/>
+          <ProfilePicture uploadedImage={this.uploadedImage}  userProfileData={this.state.userProfileData} img={this.state.img}/>
           <div className="button-container">
             <Button className={"fab fa-github"} handleClick={this.toGithub}/>
             <Button className={"fab fa-linkedin"} handleClick={this.toLinkedin}/>
           </div>
-          <ProfileDetails/>
+          <ProfileDetails userProfileData={this.state.userProfileData}/>
         </div>
         <div>
           <ProfileContent/>
