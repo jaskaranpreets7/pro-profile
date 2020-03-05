@@ -15,10 +15,12 @@ export default function ProfilePicture(props) {
                 <div className="profile-picture">
                     {profilePic.length === 0 ? <img alt="Profile Pic" src={props.img}/>: <img alt="Profile Pic" src={profilePic}/>}
                 </div>
-                <div className="upload-button">
-                    <input type="file" id="file" onChange={handlePhoto}/>
-                    <label htmlFor="file">Upload</label>
-                </div>
+                {props.userProfileData.uploadButtonState === 'Y' ?
+                    <div className="upload-button">
+                        <input type="file" id="file" onChange={handlePhoto}/>
+                        <label htmlFor="file">Upload</label>
+                    </div> : null
+                }
             </div>
         </Fragment>
 
