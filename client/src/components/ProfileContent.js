@@ -3,12 +3,12 @@ import '../style/ProfileContent.css';
 import ProfileDrawer from './ProfileDrawer';
 import ProfileView from './ProfileView';
 
-export default function ProfileContent(props) {
+export default function ProfileContent({userProfileContent}) {
     const labels = ['About Me', 'Experience' , 'Skills', 'Projects', 'Education']
 
-    const [value, setValue] = useState('')
-    const handleClick = (label) => {
-        setValue(label)
+    const [label, setLabel] = useState('')
+    const handleClick = (lbl) => {
+        setLabel(lbl)
     }
     return (
         <div className="profile-content-wrapper">
@@ -17,7 +17,7 @@ export default function ProfileContent(props) {
                     <ProfileDrawer handleClick={handleClick} labels={labels}/>
                 </div>
                 <div className="profile-view">
-                    <ProfileView text={value}/>
+                    <ProfileView label={label} userProfileContent={userProfileContent}/>
                 </div>
             </div>
         </div>
