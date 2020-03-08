@@ -16,6 +16,7 @@ class App extends Component{
       userProfileData:{},
       imgKey : '',
       img : '',
+      userProfileContent:{}
     }
   }
 
@@ -32,7 +33,8 @@ class App extends Component{
       .then((response)=>{
         this.setState({
           userProfileData : response.data.user_profile,
-          imgKey : response.data.image_key
+          imgKey : response.data.image_key,
+          userProfileContent :response.data
         })
       }).catch((error)=>{
         console.log('Error in fetch userProfile', error)
@@ -78,7 +80,7 @@ class App extends Component{
           <ProfileDetails userProfileData={this.state.userProfileData}/>
         </div>
         <div>
-          <ProfileContent/>
+          <ProfileContent userProfileContent={this.state.userProfileContent}/>
         </div>
       </div>
     );
