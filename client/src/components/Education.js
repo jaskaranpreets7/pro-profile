@@ -1,18 +1,31 @@
 import React, { Fragment } from 'react'
+import '../style/Education.css'
 
 export default function Education({educationContent}) {
     return (
-        <div>
+        <Fragment>
             {educationContent.map((item)=>{
                 return (
                     <Fragment>
-                        <h1>{item.scholl_name}</h1>
-                        <h2>{item.degree}</h2>
-                        <h3>{item.major}</h3>
-                        <h4>{item.year_passed}</h4>
+                        <div className="education-fields">
+                            <div className="field-labels" >SCHOOL NAME : </div>
+                            <div className="field-text">{item.scholl_name}</div>
+                        </div>
+                        <div className="education-fields">
+                            <div className="field-labels" >DEGREE : </div>
+                            <div className="field-text">{item.degree}</div>
+                        </div>
+                        <div className="education-fields">
+                            <div className="field-labels" >MAJOR: </div>
+                            <div className="field-text">{item.major}</div>
+                        </div>
+                        <div className="education-fields">
+                            <div className="field-labels" >YEAR PASSED : </div>
+                            <div className="field-text">{item.year_passed}</div>
+                        </div>
                     </Fragment>
                 )
             })}
-        </div>
+        </Fragment>
     )
 }
