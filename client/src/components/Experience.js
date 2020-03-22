@@ -1,10 +1,36 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import '../style/Experience.css'
 
 export default function Experience({experienceContent}) {
-    console.log(experienceContent)
     return (
-        <div>
-            Experience
-        </div>
+        <Fragment>
+            {experienceContent.map((item)=>{
+                return (
+                    <Fragment>
+                        <div className="experience-fields">
+                            <div className="left-fields">
+                                <div className="company">{item.company}</div>
+                                &nbsp; {"-"} &nbsp;
+                                <div className="title">{item.title}</div>
+                            </div>
+                            <div className="right-fields"> 
+                                <div className="start-date">{item.start_date}</div>
+                                &nbsp; {"-"} &nbsp;
+                                <div className="end-date">{item.end_date}</div>
+                            </div>
+                        </div>
+                        <div className="description">Description : </div>
+                        {item.description.map((item)=>{
+                            return (
+                                <ul>
+                                    <li>{item}</li>
+                                </ul>
+                            )
+                        })}
+
+                    </Fragment>
+                )
+            })}
+        </Fragment>
     )
 }
