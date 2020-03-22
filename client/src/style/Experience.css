@@ -1,0 +1,52 @@
+.experience-fields{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    width: 100%;
+    height: 50px;
+}
+.experience-fields > .left-fields{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: inherit;
+    align-items: center;
+}
+.left-fields > .company{
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-weight: 600;
+}
+.left-fields > .title{
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-weight: 500;
+}
+.experience-fields > .right-fields{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: inherit;
+    align-items: center;
+    padding-left: 14%;
+}
+.right-fields> .start-date{
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+}
+.right-fields> .end-date{
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+}
+.description{
+    display: flex;
+    width: 100%;
+    height: 25px;
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
