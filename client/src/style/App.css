@@ -9,6 +9,7 @@
   width: 100%;
   display : grid ;
   grid-template-columns: 22% 5% auto;
+  height: 160px;
 }
 
 .button-container{
