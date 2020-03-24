@@ -6,7 +6,7 @@ export default function Skills({skillContent}) {
         <div className="skills-wrapper">
             {skillContent.map((item)=>{
                 return (
-                    <div className="bubble">
+                    <div className="bubble" key={item.name}>
                         <div className="text">
                             {item.name}
                         </div>
