@@ -26,6 +26,7 @@ class App extends Component{
     setTimeout(()=>{
       this.getProfilePic()
     },1000)
+    this.realTimeUpdate()
   }
 
   fetchUserProfile = async() => {
@@ -39,6 +40,19 @@ class App extends Component{
       }).catch((error)=>{
         console.log('Error in fetch userProfile', error)
       })
+  }
+
+  realTimeUpdate = () =>{
+    const database = firebase.database();
+    const ref = database.ref('0');
+    ref.on('value', (snapshot) => {
+      const response = snapshot.val();
+      this.setState({
+        userProfileData : response.user_profile,
+        imgKey : response.image_key,
+        userProfileContent :response
+        })
+    })
   }
   
   uploadedImage = (event) => {
