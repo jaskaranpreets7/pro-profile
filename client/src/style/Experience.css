@@ -50,3 +50,8 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+ul{
+    list-style-type: square;
+    font-size: 20px;
+}
+
