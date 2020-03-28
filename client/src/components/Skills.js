@@ -1,7 +1,6 @@
 import React from 'react'
 import '../style/Skills.css'
 export default function Skills({skillContent}) {
-    console.log(skillContent)
     return (
         <div className="skills-wrapper">
             {skillContent.map((item)=>{
