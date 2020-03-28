@@ -4,9 +4,9 @@ import '../style/Experience.css'
 export default function Experience({experienceContent}) {
     return (
         <Fragment>
-            {experienceContent.map((item)=>{
+            {experienceContent.map((item , index )=>{
                 return (
-                    <Fragment>
+                    <Fragment key={index}>
                         <div className="experience-fields">
                             <div className="left-fields">
                                 <div className="company">{item.company}</div>
@@ -20,9 +20,9 @@ export default function Experience({experienceContent}) {
                             </div>
                         </div>
                         <div className="description">Description : </div>
-                        {item.description.map((item)=>{
+                        {item.description.map((item , index)=>{
                             return (
-                                <ul>
+                                <ul key={index}>
                                     <li>{item}</li>
                                 </ul>
                             )

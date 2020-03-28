@@ -4,9 +4,9 @@ import '../style/Education.css'
 export default function Education({educationContent}) {
     return (
         <Fragment>
-            {educationContent.map((item)=>{
+            {educationContent.map((item ,index)=>{
                 return (
-                    <Fragment>
+                    <Fragment key={index}>
                         <div className="education-fields">
                             <div className="field-labels" >SCHOOL NAME : </div>
                             <div className="field-text">{item.scholl_name}</div>
