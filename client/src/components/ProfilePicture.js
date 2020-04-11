@@ -1,5 +1,5 @@
 import React, { useState ,Fragment } from 'react'
-import '../style/ProfilePicture.css';
+import '../style/profilePicture.scss';
 
 export default function ProfilePicture(props) {
     const [profilePic , setProfilePic] = useState('')

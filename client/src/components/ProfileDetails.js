@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style/ProfileDetails.css';
+import '../style/profileDetails.scss';
 
 export default function ProfileDetails({userProfileData}) {
     return (

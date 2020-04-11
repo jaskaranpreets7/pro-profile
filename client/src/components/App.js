@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../style/App.css';
+import '../style/app.scss';
 import ProfilePicture from './ProfilePicture';
 import ProfileDetails from './ProfileDetails';
 import firebase from 'firebase'

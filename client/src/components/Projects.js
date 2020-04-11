@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import '../style/Projects.css'
+import '../style/projects.scss'
 
 export default function Projects({projectContent}) {
 

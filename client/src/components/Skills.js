@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style/Skills.css'
+import '../style/skills.scss'
 export default function Skills({skillContent}) {
     return (
         <div className="skills-wrapper">

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import '../style/Experience.css'
+import '../style/experience.scss'
 
 export default function Experience({experienceContent}) {
     return (

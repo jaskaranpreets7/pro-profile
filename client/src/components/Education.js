@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import '../style/Education.css'
+import '../style/education.scss'
 
 export default function Education({educationContent}) {
     return (
