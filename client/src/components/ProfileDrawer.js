@@ -1,4 +1,6 @@
 import React from 'react'
+import '../style/profileDrawer.scss'
+import '../style/button.scss'
 
 export default function ProfileDrawer(props) {
     const handleClick = (label) => {
@@ -7,7 +9,7 @@ export default function ProfileDrawer(props) {
     const renderLabels = props.labels.map( (label , index )=><button type="button" className="btn btn-primary btn-lg btn-block" key={index} onClick={()=> handleClick(label)}>{label}</button> )
 
     return (
-        <div>
+        <div className="profile-drawer-wrapper">
             {renderLabels}
         </div>
     )
