@@ -1,4 +1,27 @@
+@import './breakpoints.scss';
 
+i{
+    @include smart-phone{
+        font-size: 20px;
+        margin: auto 10px auto 0px;
+    }
+    @include tablet-portrait{
+        font-size: 35px;
+        margin: auto 10px auto 0px;
+    }
+    @include tablet-landscape{
+        font-size: 50px;
+        margin: auto 10px auto 0px;
+    }
+    @include desktop{
+        font-size: 50px;
+        margin: auto 10px auto 0px;
+    }
+    @include large-desktop{
+        font-size: 50px;
+        margin: auto 10px auto 0px;
+    }
+}
 .btn {
     letter-spacing: 0;
 }

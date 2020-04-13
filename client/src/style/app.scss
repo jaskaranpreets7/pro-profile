@@ -1,19 +1,101 @@
+@import './breakpoints.scss';
+
 .app-container{
-  height: 100vh;
-  width: 100%;
-  overflow: auto;
-  min-height: 100vh;
+  @include smart-phone{
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    min-height: 100vh;
+  }
+  @include tablet-portrait{
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    min-height: 100vh;
+  }
+  @include tablet-landscape{
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    min-height: 100vh;
+  }
+  @include desktop{
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    min-height: 100vh;
+  }
+  @include large-desktop{
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    min-height: 100vh;
+  }
 }
 
 .app-profile-wrapper{
-  width: 100%;
-  display : grid ;
-  grid-template-columns: 22% 5% auto;
-  height: 160px;
+  @include smart-phone{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% auto;
+    height: 160px;
+  }
+  @include tablet-portrait{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% auto;
+    height: 160px;
+  }
+  @include tablet-landscape{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% auto;
+    height: 160px;
+  }
+  @include desktop{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% auto;
+    height: 175px;
+  }
+  @include large-desktop{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% auto;
+    height: 175px;
+  }
 }
 
-.button-container{
-  display: grid;
-  width: 100%;
-  margin: auto;
+.profile-wrapper{
+  @include smart-phone{
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 40%;
+  }
+  @include tablet-portrait{
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 40%;
+  }
+  @include tablet-landscape{
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto 40%;
+  }
+  @include desktop{
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto 40%;
+  }
+  @include large-desktop{
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto 40%;
+  }
+  .button-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
