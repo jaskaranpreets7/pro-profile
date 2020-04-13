@@ -1,0 +1,24 @@
+@import '../style/breakpoints.scss';
+
+.profile-drawer-wrapper{
+    @include smart-phone{
+        display: flex;
+        flex-direction: row;
+    }
+    @include tablet-portrait{
+        display: flex;
+        flex-direction: row;
+    }
+    @include tablet-landscape{
+        display: flex;
+        flex-direction: row;
+    }
+    @include desktop{
+        display: flex;
+        flex-direction: column;
+    }
+    @include large-desktop{
+        display: flex;
+        flex-direction: column;
+    }
+}
