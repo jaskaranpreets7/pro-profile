@@ -87,15 +87,15 @@ class App extends Component{
       <div className="app-container">
         <div className="app-profile-wrapper" >
           <ProfilePicture uploadedImage={this.uploadedImage}  userProfileData={this.state.userProfileData} img={this.state.img}/>
-          <div className="button-container">
-            <Button className={"fab fa-github"} handleClick={this.toGithub}/>
-            <Button className={"fab fa-linkedin"} handleClick={this.toLinkedin}/>
+          <div className="profile-wrapper">
+            <ProfileDetails userProfileData={this.state.userProfileData}/>
+            <div className="button-container">
+              <Button className={"fab fa-github"} handleClick={this.toGithub}/>
+              <Button className={"fab fa-linkedin"} handleClick={this.toLinkedin}/>
+            </div>
           </div>
-          <ProfileDetails userProfileData={this.state.userProfileData}/>
         </div>
-        <div>
-          <ProfileContent userProfileContent={this.state.userProfileContent}/>
-        </div>
+        <ProfileContent userProfileContent={this.state.userProfileContent}/>
       </div>
     );
   }
