@@ -4,11 +4,8 @@
     display: flex;
     width: 100%;
     .about-me-text{
-        font-family: auto;
         font-size: 2em;
-
         @include smart-phone{
-            font-family: auto;
             font-size: 1.5em;
         }
     }

@@ -39,68 +39,65 @@
     box-shadow: 20px;
     .name{
         color: black;
-        font-family: fantasy;
         background: -webkit-linear-gradient(#6d6c6c, #030303);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         @include smart-phone{
-            font-size: 12px;
+            font-size: 1.5rem;
         }
         @include tablet-portrait{
-            font-size: 18px;
+            font-size: 2rem;
         }
         @include tablet-landscape{
-            font-size: 28px;
+            font-size: 3rem;
         }
         @include desktop{
-            font-size: 36px;
+            font-size: 4rem;
         }
         @include large-desktop{
-            font-size: 60px;
+            font-size: 6rem;
         }
     }
     .email{
         color: black;
-        font-family: fantasy;
         background: -webkit-linear-gradient(#6d6c6c, #030303);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         @include smart-phone{
-            font-size: 10px;
+            font-size: 1.5rem;
         }
         @include tablet-portrait{
-            font-size: 16px;
+            font-size: 1.5rem;
         }
         @include tablet-landscape{
-            font-size: 24px;
+            font-size: 2rem;
         }
         @include desktop{
-            font-size: 32px;
+            font-size: 3rem;
         }
         @include large-desktop{
-            font-size: 42px;
+            font-size: 4.5rem;
         }
     }
     .phone{
         color: black;
-        font-family: fantasy;
         background: -webkit-linear-gradient(#6d6c6c, #030303);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         @include smart-phone{
-            font-size: 9px;
+            font-size: 1.5rem;
         }
         @include tablet-portrait{
-            font-size: 14px;
+            font-size: 1.5rem;
         }
         @include tablet-landscape{
-            font-size: 22px;
+            font-size: 2rem;
         }
         @include desktop{
-            font-size: 32px;
+            font-size: 3rem;
         }
         @include large-desktop{
-            font-size: 42px;
+            font-size: 5rem;
         }
     }
 }
