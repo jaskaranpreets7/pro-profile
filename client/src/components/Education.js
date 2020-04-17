@@ -6,7 +6,7 @@ export default function Education({educationContent}) {
         <Fragment>
             {educationContent.map((item ,index)=>{
                 return (
-                    <Fragment key={index}>
+                    <div style={{borderBottom: '2px solid black'}} key={index}>
                         <div className="education-fields">
                             <div className="field-labels" >SCHOOL NAME : </div>
                             <div className="field-text">{item.scholl_name}</div>
@@ -23,7 +23,7 @@ export default function Education({educationContent}) {
                             <div className="field-labels" >YEAR PASSED : </div>
                             <div className="field-text">{item.year_passed}</div>
                         </div>
-                    </Fragment>
+                    </div>
                 )
             })}
         </Fragment>
