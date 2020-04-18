@@ -3,6 +3,7 @@ import '../style/profilePicture.scss';
 
 export default function ProfilePicture(props) {
     const [profilePic , setProfilePic] = useState('')
+    
     const handlePhoto = (event) =>{
         let uploadedImg = (event !==null) ? URL.createObjectURL(event.target.files[0]) :''
         props.uploadedImage(event)
@@ -12,9 +13,16 @@ export default function ProfilePicture(props) {
     return (
         <Fragment>
             <div className="profile-container">
-                <div className="profile-picture">
-                    {profilePic.length === 0 ? <img alt="Profile Pic" src={props.img}/>: <img alt="Profile Pic" src={profilePic}/>}
-                </div>
+                {props.img.length !== 0 ? 
+                    <div className="profile-picture">
+                        <img alt="" src={props.img}/>
+                    </div> :
+                    <div className="profile-picture-loader">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                }
                 {props.userProfileData.uploadButtonState === 'Y' ?
                     <div className="upload-button">
                         <input type="file" id="file" onChange={handlePhoto}/>
