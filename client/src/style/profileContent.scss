@@ -51,22 +51,22 @@
 
 .profile-drawer{
     @include smart-phone{
-        margin: 0% 0% 0% 0%;
+        margin: auto 0 auto 0;
     }
     @include tablet-portrait{
-        margin: 0% 0% 0% 0%;
+        margin: auto 0 auto 0;
     }
     @include tablet-landscape{
-        margin: 0% 0% 0% 0%;
-        padding-top: 20px;
+        margin: auto 0 auto 0;
+        // padding-top: 20px;
     }
     @include desktop{
-        margin: 30% 0% 0% 0%;
-        padding: 10px;
+        margin: auto 0 auto 0;
+        // padding: 10px;
     }
     @include large-desktop{
-        margin: 30% 0% 0% 0%;
-        padding: 10px;
+        margin: auto 0 auto 0;
+        // padding: 10px;
     }
 }
 
