@@ -75,6 +75,59 @@ img{
         height: 30vh;
     }
 }
+.profile-picture-loader{
+    display: inline-block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 8%;
+    @include smart-phone{
+        top: 5%;
+    }
+    @include tablet-portrait{
+        top: 5%;
+    }
+    @include tablet-landscape{
+        top: 10%;
+    }
+    @include desktop{
+        top: 10%;
+    }
+    @include large-desktop{
+        top: 10%;
+    }
+}
+.profile-picture-loader div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: rgb(19, 18, 18);
+    animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.profile-picture-loader div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+.profile-picture-loader div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+.profile-picture-loader div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+@keyframes loader {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+    50%, 100% {
+        top: 24px;
+        height: 32px;
+    }
+}
+
 .upload-button{
     display: block;
     text-align: center;
