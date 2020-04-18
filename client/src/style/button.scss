@@ -1,0 +1,63 @@
+@import './breakpoints.scss';
+
+i{
+    @include smart-phone{
+        font-size: 20px;
+        margin: auto 10px auto 0px;
+    }
+    @include tablet-portrait{
+        font-size: 35px;
+        margin: auto 10px auto 0px;
+    }
+    @include tablet-landscape{
+        font-size: 50px;
+        margin: auto 10px auto 0px;
+    }
+    @include desktop{
+        font-size: 50px;
+        margin: auto 10px auto 0px;
+    }
+    @include large-desktop{
+        font-size: 50px;
+        margin: auto 10px auto 0px;
+    }
+}
+.btn {
+    letter-spacing: 0;
+}
+.btn-lg{
+    @include smart-phone{
+        padding: 9px 0px;
+        font-size: 12px;
+    }
+    @include tablet-portrait{
+        padding: 9px 0px;
+        font-size: 12px;
+    }
+    @include tablet-landscape{
+        padding: 9px 0px;
+        font-size: 12px;
+    }
+}
+.btn-block{
+    @include smart-phone{
+        margin-top: auto !important;
+        margin-right: 5px !important;
+    }
+    @include tablet-portrait{
+        margin-top: auto !important;
+        margin-right: 5px !important;
+    }
+    @include tablet-landscape{
+        margin-top: auto !important;
+        margin-right: 5px !important;
+    }
+}
+
+.btn:hover{
+    letter-spacing: 5px;
+}
+.btn:active {
+    outline: none;
+    border: none;
+}

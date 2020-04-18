@@ -1,0 +1,84 @@
+@import './breakpoints.scss';
+
+.profile-content-wrapper{
+    display: grid;
+    width: 100%;
+    height: 65vh;
+    margin-top: 7%;  
+    .profile-content-container{
+        @include smart-phone{
+            display: grid;
+            margin: auto 2% auto 2%;
+            width: 96%;
+            height: 100%;
+            grid-template-rows: 15% auto;
+            border-radius: 20px;
+        }
+        @include tablet-portrait{
+            display: grid;
+            margin: auto 2% auto 2%;
+            width: 96%;
+            height: 100%;
+            grid-template-rows: 15% auto;
+            border-radius: 20px;
+        }
+        @include tablet-landscape{
+            display: grid;
+            margin: auto;
+            width: 80%;
+            height: 100%;
+            grid-template-rows: 15% auto;
+            border-radius: 20px;
+        }
+        @include desktop{
+            display: grid;
+            margin: auto;
+            width: 80%;
+            height: 100%;
+            grid-template-columns: 25% auto;
+            border-radius: 20px;
+        }
+        @include large-desktop{
+            display: grid;
+            margin: auto;
+            width: 80%;
+            height: 100%;
+            grid-template-columns: 25% auto;
+            border-radius: 20px;
+        }
+    } 
+}
+
+.profile-drawer{
+    @include smart-phone{
+        margin: auto 0 auto 0;
+    }
+    @include tablet-portrait{
+        margin: auto 0 auto 0;
+    }
+    @include tablet-landscape{
+        margin: auto 0 auto 0;
+        // padding-top: 20px;
+    }
+    @include desktop{
+        margin: auto 0 auto 0;
+        // padding: 10px;
+    }
+    @include large-desktop{
+        margin: auto 0 auto 0;
+        // padding: 10px;
+    }
+}
+
+.profile-view{
+    display: block;
+    width: 100%;
+    padding: 5% 1% 2% 1%;
+    background-color: white;
+    border-radius: 20px;
+    min-height: 65vh;
+    max-height: 65vh;
+    overflow: auto;
+    opacity: 0.9;
+    box-shadow: 5px 5px 5px;
+}

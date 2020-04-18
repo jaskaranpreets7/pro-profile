@@ -1,8 +1,0 @@
-.about-me-wrapper{
-    display: flex;
-    width: 100%;
-}
-.about-me-wrapper > .about-me-text{
-    font-family: auto;
-    font-size: 2em;
-}
