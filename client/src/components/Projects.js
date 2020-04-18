@@ -11,7 +11,7 @@ export default function Projects({projectContent}) {
                         <div className="project-title" >
                             <div className="project-title-text">{item.name}</div>
                         </div>
-                        <div className="description">Description : </div>
+                        <div className="project-description">Project description : </div>
                             {item.description.map((item , index)=>{
                                 return (
                                     <ul key={index}>
